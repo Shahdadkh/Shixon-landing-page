@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	margin:0;
+}
+#slider{
+	position:relative;
+	border:1px solid #ccc;
+	height:400px;
+	width:100%;
+}
+
+#slider > .galery {
+	position:relative;
+	transition:0.5s;
+	left:0;
+	width:500%;
+	height:100%;
+}
+#slider > .galery > .items {
+	width:20%;
+	height:100%;
+	float:left;
+}
+#slider > .galery > .items > img{
+	height:100%;
+	width:100%;
+}
+
+#slider > #right:hover{
+	opacity:1;
+}
+#slider > #right{
+	position:absolute;
+	top:184px;
+	right:0;	
+	margin-right:10px;
+	background:url("slider/controls.png") no-repeat;
+	background-position:-32px 0;
+	cursor:pointer;
+	width:32px;
+	height:32px;
+	opacity:0.5;	
+}
+
+#slider > #left:hover{
+	opacity:1;
+}
+#slider > #left{
+	position:absolute;
+	top:184px;
+	margin-left:10px;
+	background:url("slider/controls.png") no-repeat;
+	background-position:0 0;
+	cursor:pointer;
+	width:32px;
+	height:32px;
+	opacity:0.5;
+}
+
+</style>
+</head>
+<body>
+<div id="slider">
+	<div class="galery">
+		<div class="items">
+			<img src="slider/1.jpg">
+		</div>
+		<div class="items">
+			<img src="slider/2.jpg">
+		</div>
+		<div class="items">
+			<img src="slider/3.jpg">
+		</div>	
+		<div class="items">
+			<img src="slider/4.jpg">
+		</div>	
+		<div class="items">
+			<img src="slider/5.jpg">
+		</div>
+	</div>
+	<div id="right"></div>
+	<div id="left"></div>	
+</div>
+<script>
+pos = 0;
+right.onclick = function() {
+if(pos > -400){
+	pos = pos - 100;
+	galery.style.left = pos + "%";
+	}else if(pos == -400){
+		pos = 0;
+		galery.style.left = pos + "%";	
+	}
+}
+left.onclick = function() {
+if(pos < 0) {
+	pos = pos + 100;
+	galery.style.left = pos + "%";
+	}else if(pos == 0){
+		pos = -400;
+		galery.style.left = pos + "%";	
+	}
+}
+</script>
+</body>
+</html>
